@@ -88,3 +88,8 @@ div.title1 fieldset {
   border-color: green;
   border-radius: 15px;
 }
+div.title1 .family-status {
+  color: red;
+  text-decoration: underline;
+  font-size: 20px;
+}
