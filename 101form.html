@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+    <title>101form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body style="text-align: center" ;>
+    <a href="index.html">
+      <img
+        src="data:image/png;base64,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"
+        alt="home"
+        width="100px"
+      />
+    </a>
+    <h1>כרטיס עובד</h1>
+    <input type="number" id="year" name="year" />
+    <label for="year">:שנת המס</label>
+    <form method="post" action="https://formspree.io/f/xrgdnqjz">
+      <div class="title1">
+        <fieldset style="text-align: right">
+          <legend style="text-align: right">א. פרטי מעביד</legend>
+          <input type="text" id="name" name="name" />
+          <label for="name">שם </label>
+          <input type="text" id="address" name="address" />
+          <label for="address">כתובת</label>
+          <input type="number" id="phone" name="phone" />
+          <label for="phone">מספר טלפון</label>
+          <input type="number" id="employer-number" name="employer-number" />
+          <label for="employer-number">תיק ניכויים</label>
+        </fieldset>
+        <br />
+        <fieldset style="text-align: right">
+          <legend style="text-align: right">ב. פרטי העובד/ת</legend>
+          <label for="id">מספר זהות</label>
+          <input type="number" id="id" name="id" />
+
+          <label for="surname">שם משפחה</label>
+          <input type="text" id="surname" name="surname" />
+          <label for="immigration">תאריך עלייה </label>
+          <input type="date" id="immigration" name="immigration" />
+
+          <input type="date" id="date-of-birth" name="date-of-birth" />
+          <label for="date-of-birth">תאריך לידה</label>
+          <br />
+          <br />
+          <input type="text" id="address-employee" name="address-employee" />
+          <label for="address-employee">כתובת פרטית</label>
+          <input type="number" id="phone" name="phone" />
+          <label for="phone">מספר טלפון</label>
+          <br /><br />
+        </fieldset>
+        <fieldset style="text-align: right">
+          <legend></legend>
+
+          <label for="male & female;">מין:</label>
+          <input type="radio" id="gender" name="gender" />
+          <label for="gender">זכר</label>
+          <input type="radio" id="gender" name="gender" />
+          <label for="gender">נקבה</label>
+
+          &nbsp;&nbsp;
+          <label for="married">מצב משפחתי:</label>
+          <input type="radio" id="married" name="family-status" />
+          <label for="married">נשוי/אה</label>
+
+          <input type="radio" id="divorcee" name="family-status" />
+          <label for="divorcee">גרוש/ה</label>
+          <input type="radio" id="widower" name="family-status" />
+          <label for="widower">אלמן/ה</label>
+        </fieldset>
+        <fieldset>
+          <legend style="text-align: right">
+            ג. פרטים על ילדים שבשנת המס טרם מלאו להם 18 שנה
+          </legend>
+          <div style="direction: rtl">
+            <table style="font-size: 25px">
+              <thead>
+                <tr>
+                  <th>שם פרטי</th>
+                  <th>מספר זהות</th>
+                  <th>תאריך לידה</th>
+                </tr>
+                <tr style="height: 25px">
+                  <td><input type="text" id="name1" name="name1" /></td>
+                  <td><input type="text" id="id1" name="name1" /></td>
+                  <td><input type="text" id="birth1" name="name1" /></td>
+                </tr>
+                <tr style="height: 25px">
+                  <td><input type="text" id="name2" name="name2" /></td>
+                  <td><input type="text" id="id2" name="name2" /></td>
+                  <td><input type="text" id="birth2" name="name2" /></td>
+                </tr>
+                <tr style="height: 25px">
+                  <td><input type="text" id="name3" name="name3" /></td>
+                  <td><input type="text" id="id3" name="name3" /></td>
+                  <td><input type="text" id="birth3" name="name3" /></td>
+                </tr>
+                <tr style="height: 25px">
+                  <td><input type="text" id="name4" name="name4" /></td>
+                  <td><input type="text" id="id4" name="name4" /></td>
+                  <td><input type="text" id="birth4" name="name4" /></td>
+                </tr>
+                <tr style="height: 25px">
+                  <td><input type="text" id="name5" name="name5" /></td>
+                  <td><input type="text" id="id5" name="name5" /></td>
+                  <td><input type="text" id="birth5" name="name5" /></td>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </fieldset>
+        <fieldset style="text-align: right">
+          <legend style="text-align: right">
+            ד. פרטים על הכנסותיי ממעביד זה
+          </legend>
+          <input type="checkbox" id="monthly-income" name="monthly-income" />
+          <label for="monthly-income">משכורת חודש</label>
+          <input
+            type="checkbox"
+            id="additional-income"
+            name="additional-income"
+          />
+          <label for="additional-income">משכורת נוספת</label>
+          <br />
+          <input type="checkbox" id="Partial-income" name="Partial-income" />
+          <label for="Partial-income">משכורת חלקית</label>
+          <input type="checkbox" id="Salary" name="Salary" />
+          <label for="Salary">שכר עבודה (עובד יומי)</label>
+          <br />
+          <input type="checkbox" id="allowance" name="allowance" />
+          <label for="allowance">קיצבה</label>
+          <input type="checkbox" id="Stipend" name="Stipend" />
+          <label for="Stipend">מילגה</label>
+          <br />
+          <input type="text" id="another source" name="another source" />
+          <input type="checkbox" id="another source" name="another source" />
+          <label for="another source">:מקור אחר</label>
+        </fieldset>
+        <fieldset style="text-align: right">
+          <legend style="text-align: right">ה. פרטים על בן/בת זוג</legend>
+          <input type="number" id="id1" name="id1" />
+          <label for="id1">מספר זהות</label>
+          <input type="text" id="surname1" name="surname1" />
+          <label for="surname1">שם משפחה</label>
+          <input type="text" id="name1" name="name1" />
+          <label for="name1">שם פרטי</label>
+          <br />
+          <br />
+          <input type="date" id="immigration1" name="immigration1" />
+          <label for="immigration1">תאריך עלייה </label>
+          <br />
+          <br />
+          <input type="date" id="date-of-birth1" name="date-of-birth1" />
+          <label for="date-of-birth1">תאריך לידה</label>
+          <br />
+          <br />
+          <input type="radio" id="income" name="income" checked />
+          <label for="income">אין לבן/בת הזוג כל הכנסה</label>
+          <input type="radio" id="income2" name="income" />
+          <label for="income2">יש לבן/בת הזוג הכנסה מ</label>
+          <br />
+          <input type="radio" id="Business" name="other" checked />
+          <label for="Business">עבודה/עסק</label>
+          <input type="radio" id="other" name="other" />
+          <label for="other">עבודה/עסק</label>
+        </fieldset>
+
+        <fieldset style="text-align: right">
+          <legend style="text-align: right">ו. שינויים במהלך השנה</legend>
+          <div style="direction: rtl">
+            <table style="font-size: 25px">
+              <tr>
+                <th>תאריך השינוי</th>
+                <th>פרטי השינויי</th>
+                <th>חתימת העובד/ת</th>
+              </tr>
+              <tr>
+                <td><input type="text" id="date1" name="change" /></td>
+                <td><input type="text" id="changes" name="change" /></td>
+                <td><input type="text" id="signature" name="change" /></td>
+              </tr>
+              <tr>
+                <td><input type="text" id="date2" name="change1" /></td>
+                <td><input type="text" id="changes1" name="change1" /></td>
+                <td><input type="text" id="signature1" name="change1" /></td>
+              </tr>
+              <tr>
+                <td><input type="text" id="date3" name="change2" /></td>
+                <td><input type="text" id="changes2" name="change2" /></td>
+                <td><input type="text" id="signature2" name="change2" /></td>
+              </tr>
+              <tr>
+                <td><input type="text" id="date4" name="change3" /></td>
+                <td><input type="text" id="changes4" name="change3" /></td>
+                <td><input type="text" id="signature4" name="change3" /></td>
+              </tr>
+              <tr>
+                <td><input type="text" id="date5" name="change4" /></td>
+                <td><input type="text" id="changes5" name="change4" /></td>
+                <td><input type="text" id="signature5" name="change4" /></td>
+              </tr>
+            </table>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>ז.אני מבקש/ת פטור או זיכוי ממס מהסיבות הבאות</legend>
+          <ol class="list">
+            <li>
+              <input
+                type="checkbox"
+                id="=israeli-resident"
+                name="israeli-resident"
+              />
+              <label for="israeli-resident">אני תושב/ת ישראל</label>
+            </li>
+            <br />
+            <li>
+              <input type="checkbox" id="blind" name="blind" />
+              <label for="blind">אני 100% נכה / עיוור/ת לצמיתות</label>
+            </li>
+            <br />
+            <li>
+              <input
+                type="checkbox"
+                id="qualifying-settlement"
+                name="qualifying-settlement"
+              />
+              <label for="qualifying-settlement"
+                >אני תושב/ת קבוע/ה בישוב מזכה
+              </label>
+            </li>
+            <br />
+            <li>
+              <input type="checkbox" id="immigrant" name="immigrant" />
+              <label for="immigrant">אני עולה חדש/ה</label>
+            </li>
+            <br />
+            <li>
+              <input
+                type="checkbox"
+                id="spouse-who-lives-with-me"
+                name="spouse-who-lives-with-me"
+              />
+              <label for="spouse-who-lives-with-me"
+                >בגין בן/בת זוגי המתגורר/ת עימי ואין לו/לה הכנסות בשנת
+                המס</label
+              >
+            </li>
+            <br />
+            <li>
+              <input type="checkbox" id="single parent" name="single parent" />
+              <label for="single parent"
+                >אני הורה במשפחה חד הורית החי בנפרד</label
+              >
+            </li>
+            <br />
+            <li>
+              <input type="checkbox" id="Children" name="Children" />
+              <label for="Children">בגין ילדיי שבחזקי המפורטים בחלק ג.</label>
+            </li>
+          </ol>
+        </fieldset>
+        <fieldset>
+          <legend>ח. הצהרה</legend>
+          <p>
+            אני מצהיר/ה כי הפרטים שמסרתי בטופס זה הינם מלאים ונכונים. ידוע לי
+            שהשמטה או מסירת פרטים לא נכונים הינה עבירה על פקודת מס הכנסה. אני
+            מתחייב/ת להודיע למעסיק על כל שינוי שיחול בפרטיי האישיים ובפרטים
+            דלעיל תוך שבוע ימים מתאריך השינוי.
+          </p>
+          <input type="date" id="date1" name="date1" />
+          <label for="date1">תאריך</label>
+        </fieldset>
+      </div>
+      <br />
+
+      <label for="idimg">צילום תעודת זהות</label>
+      <input type="file" name="idimg" id="idimg" />
+      <br /><br />
+      <div class="button">
+        <input type="submit" value="שליחת פרטים" />
+        <input type="reset" value="ניקוי טופס" />
+      </div>
+    </form>
+  </body>
+</html>

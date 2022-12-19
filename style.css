@@ -1,0 +1,90 @@
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: slateblue;
+  font-size: 45px;
+  background-color: chocolate;
+  margin: 5px;
+  text-align: center;
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  color: blue;
+  background-color: wheat;
+  font-weight: bold;
+  font-style: italic;
+}
+.primary {
+  color: red;
+}
+#lorm {
+  color: crimson;
+  background-color: thistle;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.send {
+  width: 170px;
+  height: 80px;
+  border-radius: 15px;
+  border-style: dashed;
+}
+button {
+  width: 250;
+  height: 90px;
+  background-color: brown;
+}
+
+div.my-elem-1 .a > p {
+  background-color: orangered;
+}
+div.my-elem-2 p {
+  background-color: yellow;
+}
+div.my-elem-3 .a .b.e > p,
+div#u {
+  background-color: green;
+}
+
+div.my-elem-3 .c > p {
+  background-color: blueviolet;
+}
+
+.title1 legend {
+  color: rgb(171, 20, 20);
+  font-size: 20px;
+  font-weight: bold;
+  direction: rtl;
+  text-align: right;
+}
+.list {
+  text-align: right;
+}
+.list > li {
+  direction: rtl;
+  font-weight: bold;
+}
+.button > input {
+  background-color: greenyellow;
+  font-size: 15px;
+  font-weight: bold;
+}
+div.title1 label {
+  font-weight: bold;
+}
+div.title1 p {
+  color: black;
+  background-color: white;
+  font-size: 15px;
+  text-align: right;
+}
+a {
+  text-decoration: underline;
+  font-size: 30px;
+}
+div.title1 fieldset {
+  border-color: green;
+  border-radius: 15px;
+}
